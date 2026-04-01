@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Wapen Customizer (Prototype)</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #222;
+      color: white;
+      text-align: center;
+    }
+
+    #weapon {
+      width: 300px;
+      height: 120px;
+      background: gray;
+      margin: 30px auto;
+      border-radius: 10px;
+      position: relative;
+      transition: 0.3s;
+    }
+
+    .attachment {
+      position: absolute;
+      background: #555;
+      border-radius: 5px;
+    }
+
+    #barrel {
+      width: 80px;
+      height: 20px;
+      top: 50px;
+      left: 300px;
+    }
+
+    #scope {
+      width: 80px;
+      height: 25px;
+      top: -25px;
+      left: 100px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Wapen Customizer</h1>
+
+  <div id="weapon">
+    <div id="barrel" class="attachment"></div>
+    <div id="scope" class="attachment"></div>
+  </div>
+
+  <h3>Kleur</h3>
+  <input type="color" id="colorPicker">
+
+  <h3>Grootte</h3>
+  <input type="range" id="sizeSlider" min="200" max="600" value="300">
+
+  <h3>Attachments</h3>
+  <label><input type="checkbox" id="toggleScope" checked> Scope</label><br>
+  <label><input type="checkbox" id="toggleBarrel" checked> Barrel</label>
+
+  <script src="script.js"></script>
+</body>
+</html>
